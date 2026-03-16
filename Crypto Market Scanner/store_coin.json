@@ -1,0 +1,122 @@
+[
+    {
+        "Rank": 1,
+        "Symbol": "BTC",
+        "Price": "$73688.234",
+        "24 Change": 3.73
+    },
+    {
+        "Rank": 2,
+        "Symbol": "ETH",
+        "Price": "$2284.645",
+        "24 Change": 9.65
+    },
+    {
+        "Rank": 3,
+        "Symbol": "USDT",
+        "Price": "$1.0",
+        "24 Change": 0
+    },
+    {
+        "Rank": 4,
+        "Symbol": "BNB",
+        "Price": "$676.318",
+        "24 Change": 3.14
+    },
+    {
+        "Rank": 5,
+        "Symbol": "XRP",
+        "Price": "$1.482",
+        "24 Change": 4.27
+    },
+    {
+        "Rank": 6,
+        "Symbol": "USDC",
+        "Price": "$1.0",
+        "24 Change": 0
+    },
+    {
+        "Rank": 7,
+        "Symbol": "SOL",
+        "Price": "$93.357",
+        "24 Change": 7.21
+    },
+    {
+        "Rank": 8,
+        "Symbol": "TRX",
+        "Price": "$0.298",
+        "24 Change": 0.04
+    },
+    {
+        "Rank": 9,
+        "Symbol": "STETH",
+        "Price": "$2294.965",
+        "24 Change": 9.62
+    },
+    {
+        "Rank": 10,
+        "Symbol": "DOGE",
+        "Price": "$0.101",
+        "24 Change": 5.81
+    },
+    {
+        "Rank": 11,
+        "Symbol": "WBT",
+        "Price": "$57.615",
+        "24 Change": 4.13
+    },
+    {
+        "Rank": 12,
+        "Symbol": "ADA",
+        "Price": "$0.285",
+        "24 Change": 8.33
+    },
+    {
+        "Rank": 13,
+        "Symbol": "BCH",
+        "Price": "$476.953",
+        "24 Change": 3.16
+    },
+    {
+        "Rank": 14,
+        "Symbol": "HYPE",
+        "Price": "$38.938",
+        "24 Change": 4.26
+    },
+    {
+        "Rank": 15,
+        "Symbol": "WBTC",
+        "Price": "$73974.984",
+        "24 Change": 3.69
+    },
+    {
+        "Rank": 16,
+        "Symbol": "LINK",
+        "Price": "$9.718",
+        "24 Change": 6.19
+    },
+    {
+        "Rank": 17,
+        "Symbol": "AUDM",
+        "Price": "$0.706",
+        "24 Change": 1
+    },
+    {
+        "Rank": 18,
+        "Symbol": "XMR",
+        "Price": "$363.737",
+        "24 Change": 1.76
+    },
+    {
+        "Rank": 19,
+        "Symbol": "WEETH",
+        "Price": "$2500.751",
+        "24 Change": 9.67
+    },
+    {
+        "Rank": 20,
+        "Symbol": "USDE",
+        "Price": "$1.0",
+        "24 Change": -0.03
+    }
+]
