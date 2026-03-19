@@ -7,11 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 store_coin = Path("store_coin.json")
 
 def get_data():
-    url = "https://openapiv1.coinstats.app/coins"
+    url = "https://openapiv1.coinstats.app/coins?limit=100"
     API_KEY = os.getenv("API_KEY")
 
     header = {
@@ -164,8 +163,6 @@ def main():
             if user == 1:
                 data = get_data()
                 save_data(data)
-                
-                
 
             elif user == 2:
                 search_coin(coins)
