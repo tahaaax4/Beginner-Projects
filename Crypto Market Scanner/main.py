@@ -3,12 +3,16 @@ import requests
 import json
 from pathlib import Path
 from colorama import Fore
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 store_coin = Path("store_coin.json")
 
 def get_data():
     url = "https://openapiv1.coinstats.app/coins"
-    API_KEY = os.getenv("Crypto_API")
+    API_KEY = os.getenv("API_KEY")
 
     header = {
         "X-API-KEY" : API_KEY
