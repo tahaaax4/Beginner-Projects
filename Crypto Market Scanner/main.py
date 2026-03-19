@@ -131,7 +131,63 @@ def top_losers(coins):
         change = coin["24 Change"]
 
         print(f"{rank:<6} {symbol:<8} {price:<10} {change:<8}")
-        
+
+def filter_move(coins):
+    
+    while True:
+        try:
+            user = float(input("Enter Number%: "))
+            break
+        except ValueError:
+            print("Enter Number.")
+
+    print(f"{'Rannk':<6} {'Symbol':<8} {'Price':<10} {'Change':<8}")
+    print("------------------------------------")  
+
+    found = False
+
+    for coin in coins:
+
+        rank = coin["Rank"]
+        symbol = coin["Symbol"]
+        price = coin["Price"]
+        change = coin["24 Change"]
+
+        if coin['24 Change'] >= user:
+            print(f"{rank:<6} {symbol:<8} {price:<10} {change:<8}")
+            found = True
+
+    if not found:
+        price("Nothing Matches.")
+
+def volatility_move(coins):
+    
+    while True:
+        try:
+            user = float(input("Enter Number%: "))
+            break
+        except ValueError:
+            print("Enter Number.")
+
+    print(f"{'Rannk':<6} {'Symbol':<8} {'Price':<10} {'Change':<8}")
+    print("------------------------------------")  
+
+    found = False
+
+    for coin in coins:
+
+        rank = coin["Rank"]
+        symbol = coin["Symbol"]
+        price = coin["Price"]
+        change = coin["24 Change"]
+
+        if abs(coin['24 Change']) >= user:
+            print(f"{rank:<6} {symbol:<8} {price:<10} {change:<8}")
+            found = True
+
+    if not found:
+        price("Nothing Matches.")
+
 def view_all(coins):
 
     for coin in coins:
@@ -153,8 +209,10 @@ def main():
         print("3 Top Coin")
         print("4 Top Gainers")
         print("5 Top Losers")
-        print("6 View All")
-        print("7 Exit")
+        print("6 Filter By % Move")
+        print("7 Volatility Move")
+        print("8 View All")
+        print("9 Exit")
         print("--------------------")
 
         try:
@@ -177,9 +235,15 @@ def main():
                 top_losers(coins)
             
             elif user == 6:
+                filter_move(coins)
+
+            elif user == 7:
+                volatility_move(coins)
+
+            elif user == 8:
                 view_all(coins)
             
-            elif user == 7:
+            elif user == 9:
                 print("BYE!")
                 break
 
