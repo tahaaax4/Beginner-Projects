@@ -99,6 +99,36 @@ def top_coin(coins):
 
         print(f"{rank:<6} {symbol:<8} {price:<10} {change_str:<8}")
 
+def top_gainers(coins):
+
+    print(f"{'Rannk':<6} {'Symbol':<8} {'Price':<10} {'Change':<8}")
+    print("------------------------------------")  
+
+    coins.sort(key = lambda coin : coin['24 Change'], reverse = True)
+
+    for i, coin in enumerate(coins[:10], start=1):
+        rank = i
+        symbol = coin["Symbol"]
+        price = coin["Price"]
+        change = coin["24 Change"]
+
+        print(f"{rank:<6} {symbol:<8} {price:<10} {change:<8}")
+
+def top_losers(coins):
+
+    print(f"{'Rannk':<6} {'Symbol':<8} {'Price':<10} {'Change':<8}")
+    print("------------------------------------")  
+
+    coins.sort(key = lambda coin : coin['24 Change'], reverse = False)
+
+    for i, coin in enumerate(coins[:10], start=1):
+        rank = i
+        symbol = coin["Symbol"]
+        price = coin["Price"]
+        change = coin["24 Change"]
+
+        print(f"{rank:<6} {symbol:<8} {price:<10} {change:<8}")
+        
 def view_all(coins):
 
     for coin in coins:
@@ -111,13 +141,17 @@ def view_all(coins):
         
 def main():
 
+    coins = load_data(store_coin)
+
     while True:
         print("--------------------")
         print("1 Refresh Data")
         print("2 Search Coin")
         print("3 Top Coin")
-        print("4 View All")
-        print("5 Exit")
+        print("4 Top Gainers")
+        print("5 Top Losers")
+        print("6 View All")
+        print("7 Exit")
         print("--------------------")
 
         try:
@@ -126,7 +160,7 @@ def main():
             if user == 1:
                 data = get_data()
                 save_data(data)
-                coins = load_data(store_coin)
+                
                 
 
             elif user == 2:
@@ -136,9 +170,15 @@ def main():
                 top_coin(coins)
 
             elif user == 4:
+                top_gainers(coins)
+
+            elif user == 5:
+                top_losers(coins)
+            
+            elif user == 6:
                 view_all(coins)
             
-            elif user == 5:
+            elif user == 7:
                 print("BYE!")
                 break
 
